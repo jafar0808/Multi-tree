@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>  
+    <?php $a = 65899660;?>
+<script type="text/javascript">
+window.onload = function () {
+     
+    var x = 1111141;
+	var chart = new CanvasJS.Chart("chartContainer",
+	{
+            
+		title:{
+			text: "Presidential Election Results"
+		},          
+		data: [
+		{        
+			type: "doughnut",
+			startAngle: 60,                          
+			toolTipContent: "{legendText}: {y} - <strong>#percent% </strong>", 					
+			showInLegend: true,
+			dataPoints: [
+				{y: x, indexLabel: "Barack Obama #percent%", legendText: "Barack Obama"  },
+				{y: 60929152, indexLabel: "Mitt Romney #percent%", legendText: "Mitt Romney" },
+				{y: 2175850,  indexLabel: "Others #percent%", legendText: "Others" }			
+			]
+		}
+		]
+	});
+	chart.render();
+	}
+</script>
+<script type="text/javascript" src="script/canvasjs.min.js"></script>
+</head>
+<body>
+<div id="chartContainer" style="height: 300px; width: 100%;"></div>
+</body>
+</html>

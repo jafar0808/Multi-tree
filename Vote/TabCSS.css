@@ -1,0 +1,93 @@
+/* Basic Style */
+body {
+	font-family: 'Orienta', sans-serif;
+	color: #252525;
+	position: relative;
+	padding:0;
+	margin: 0;
+        
+}
+
+.logo > h1 {
+    font-family: 'Lato', Calibri, Arial, sans-serif;
+    text-align: center;
+    color: #14c67d;
+    
+}
+
+
+.container {
+	width:990px;
+	margin: 0 auto;
+	padding: 20px 0;
+	text-align: center;
+        
+}
+
+.nav {
+ 
+	font-family: 'Orienta', sans-serif; 
+	font-weight: 400; /* 400 thinner */
+	font-size: 13px;
+	line-height: 13px;
+        position: relative;
+	padding: 0 0 0 4px; /* Fix for inline-block spacing*/
+	margin: 0;
+	background-color: #14c67d;
+}
+
+
+.nav a, .nav a:link, .nav a:visited, .nav a:hover, .nav a:focus, span {
+	color: #fff;
+	text-decoration: none;
+}
+
+
+.nav > li {
+	display: inline-block;
+	
+	text-align: center;
+	margin-left: -4px; /* For the inline-block spacing */
+}
+
+
+
+.nav > li > a {
+	padding:20px 18px;
+	display: block;
+	
+}
+
+.nav > li:hover > a{
+	color: #fff;
+}
+
+.nav > li:hover {
+	background-color: #12b270;
+}
+
+.nav #selected {
+	background-color: #12b270;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

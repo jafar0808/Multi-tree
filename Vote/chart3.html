@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Doughnut Chart</title>
+                
+		<script src="script/Chart.js"></script>
+		<style>
+			body{
+				padding: 0;
+				margin: 0;
+			}
+			#canvas-holder{
+				//width:10%;
+                                
+			}
+                        #canvas-holder{
+                                position: absolute;
+                                left: 190px;
+                                top: 134px;
+                                height : 250px;
+                                width : 450px;
+                                background: white;
+                                -webkit-box-shadow: 0 10px 6px -6px #777;
+                                -moz-box-shadow: 0 10px 6px -6px #777;
+                                box-shadow: 0 10px 6px -6px #777;
+                            }
+                            #chart-area{
+                                position: absolute;
+                                right: 140px;
+                            }
+                            
+		</style>
+	</head>
+	<body bgcolor="#d6d6d6">
+		<div id="canvas-holder">
+                        <h3>Total Voters</h3>
+			<canvas id="chart-area" width="600" height="180"/>
+                        
+		</div>
+
+
+	<script>
+                var x = 100;
+              /*  var canvas = $id('chart-area'),
+			colours = {
+				"MALE": blue,
+				"FEMALE": orange
+				//"Bar": teal,
+				//"Polar Area": purple,
+				//"Radar": brown,
+				//"Doughnut": green
+			};*/
+		var doughnutData = [
+				{
+					value: x,
+                                       // color: colours["Core"],
+                                        color: "#46BFBD",
+					highlight: "#5AD3D1",
+					
+					label: "MALE"
+				},
+				{
+					value: 50,
+					color:"#F7464A",
+					highlight: "#FF5A5E",
+					label: "FEMALE"
+				},
+				/*{
+					value: 20,
+					color: "#FDB45C",
+					highlight: "#FFC870",
+					label: "OTHERS"
+				},
+				{
+					value: 40,
+					color: "#949FB1",
+					highlight: "#A8B3C5",
+					label: "Grey"
+				},
+				{
+					value: 120,
+					color: "#4D5360",
+					highlight: "#616774",
+					label: "Dark Grey"
+				}*/
+
+			];
+                        /*var segmentTotal;
+                         for (var i = 0, len = doughnutData.length; i < len; i++) {
+                                 segmentTotal += doughnutData[i].value;
+                            }
+                            document.getElementById("demo").innerHTML = segmentTotal;*/
+			window.onload = function(){
+				var ctx = document.getElementById("chart-area").getContext("2d");
+                               
+				window.myDoughnut = new Chart(ctx).Doughnut(doughnutData, {responsive : true});
+                               
+			};
+
+
+
+	</script>
+	</body>
+</html>
