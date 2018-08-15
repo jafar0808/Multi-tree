@@ -9,7 +9,7 @@ $dbname = "citycrown";
 $con = mysqli_connect($servername, $username, $password, $dbname);
 if (!$con) {
     die("Connection failed: " . mysqli_connect_error());
-}
+ }
 $query = "SELECT name,manager,tooltip FROM orgtest";
 $mysqli_result = mysqli_query($con,$query);
 $data = array();
